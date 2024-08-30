@@ -1,0 +1,69 @@
+/* ProductListingPage.css */
+
+.product-listing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Align cards in the center with space around them */
+    padding: 1rem 2rem; /* Adjust padding for better spacing */
+    gap: 1.5rem; /* Increased gap for more space between cards */
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 220px; /* Fixed width for uniform card size */
+    text-align: center;
+    padding: 1rem;
+    position: relative; /* To position the SALE badge */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: none; /* Remove border if necessary */
+}
+
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    font-weight: bold; /* Bold font for the title */
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter color for price */
+    margin: 0.5rem 0;
+}
+
+.product-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem; /* Smaller padding for the button */
+    font-size: 0.9rem; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* SALE badge */
+.product-card::before {
+    content: 'SALE';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
